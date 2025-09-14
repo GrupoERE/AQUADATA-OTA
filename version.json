@@ -1,0 +1,10 @@
+{
+  "latest_version": "1.0.0",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/aquadata_latest.bin",
+  "changelog": "Versión inicial del sistema AQUADATA - Primera implementación OTA",
+  "mandatory": false,
+  "release_date": "2024-09-14",
+  "file_size_kb": 0,
+  "checksum": "",
+  "description": "Control de versiones para actualizaciones OTA del sistema AQUADATA"
+}
