@@ -1,7 +1,7 @@
 {
   "latest_version": "1.11.0",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/latest/AQUADATA_2.0.ino.bin",
-  "changelog": "Primera versión del sistema AQUADATA",
+  "changelog": "go",
   "mandatory": false,
   "release_date": "2025-10-05",
   "file_size_kb": 800,
