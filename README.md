@@ -66,16 +66,13 @@ AQUADATA-OTA/
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/aquadata_latest.bin",
   "changelog": "Descripción de cambios",
   "mandatory": false,
-  "min_version": "1.10.0",
-  "release_date": "2024-10-05",
-  "file_size_kb": 892,
-  "checksum_sha256": "hash_del_archivo"
+  "release_date": "2024-10-05"
 }
 ```
 
 3. **Hacer commit y push** a GitHub
 
-4. **Los dispositivos se actualizan automáticamente** en la siguiente verificación (cada minuto)
+4. **Los dispositivos se actualizan automáticamente** en la siguiente verificación (cada 1 minuto)
 
 ---
 
@@ -83,22 +80,20 @@ AQUADATA-OTA/
 
 ```mermaid
 graph TD
-    A[ESP32 en campo] -->|Consulta cada 1h| B[version.json]
+    A[ESP32 en campo] -->|Consulta cada 1 min| B[version.json]
     B -->|Compara versión| C{Nueva versión?}
     C -->|No| D[Continuar operación]
     C -->|Sí| E[Descargar firmware]
-    E -->|Validar SHA256| F{Checksum válido?}
-    F -->|No| G[Abortar]
-    F -->|Sí| H[Instalar firmware]
-    H -->|Reiniciar| I[ESP32 nueva versión]
-    I -->|Verificar boot| J{Boot exitoso?}
-    J -->|No - 3 intentos| K[Rollback automático]
-    J -->|Sí| L[Actualización completa]
+    E --> F[Instalar firmware]
+    F -->|Reiniciar| G[ESP32 nueva versión]
+    G -->|Verificar boot| H{Boot exitoso?}
+    H -->|No - 3 intentos| I[Rollback automático]
+    H -->|Sí| J[Actualización completa]
 ```
 
 ### Proceso Paso a Paso
 
-1. **Verificación automática** (cada 1 hora)
+1. **Verificación automática** (cada 1 minuto)
    - ESP32 consulta `version.json` vía HTTPS
    - Compara versión local con remota
 
@@ -106,16 +101,12 @@ graph TD
    - Descarga solo si hay nueva versión
    - Verifica espacio disponible en flash
 
-3. **Validación de integridad**
-   - Calcula SHA256 del archivo descargado
-   - Compara con checksum en `version.json`
-
-4. **Instalación segura**
+3. **Instalación segura**
    - Guarda versión actual como backup
    - Escribe firmware en partición OTA
    - Marca partición como válida
 
-5. **Verificación post-actualización**
+4. **Verificación post-actualización**
    - Reinicio automático
    - Rollback si falla boot 3 veces consecutivas
    - Envía estado vía MQTT
@@ -130,10 +121,7 @@ graph TD
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/aquadata_latest.bin",
   "changelog": "Fix bootloop watchdog + Optimización OTA",
   "mandatory": false,
-  "min_version": "1.8.0",
   "release_date": "2024-10-05",
-  "file_size_kb": 876,
-  "checksum_sha256": "a3f2b8c9d1e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0",
   "rollback_enabled": true,
   "breaking_changes": false
 }
@@ -147,9 +135,7 @@ graph TD
 | `firmware_url` | string | URL directa al archivo .bin |
 | `changelog` | string | Descripción breve de cambios |
 | `mandatory` | boolean | Si la actualización es obligatoria |
-| `min_version` | string | Versión mínima compatible |
-| `file_size_kb` | integer | Tamaño del firmware en KB |
-| `checksum_sha256` | string | Hash SHA256 para validación |
+| `release_date` | string | Fecha de publicación (YYYY-MM-DD) |
 | `rollback_enabled` | boolean | Permitir rollback si falla |
 | `breaking_changes` | boolean | Si rompe compatibilidad |
 
@@ -183,18 +169,16 @@ Ejemplo: v1.11.0
 - [ ] Compilado sin errores ni warnings
 - [ ] Probado en hardware real (mínimo 24h)
 - [ ] Watchdog timer funcional
-- [ ] Checksum SHA256 generado
 - [ ] `version.json` actualizado
 - [ ] `CHANGELOG.md` documentado
 - [ ] Proceso OTA completo testeado
 - [ ] Rollback verificado
-- [ ] Copiado a carpeta `latest/`
+- [ ] Archivo .bin copiado a carpeta `latest/`
 - [ ] Git commit con mensaje descriptivo
 
 ### Seguridad
 
 - ✅ Usar HTTPS para descargas (GitHub Raw)
-- ✅ Validar checksum SHA256 obligatoriamente
 - ✅ Implementar rollback automático
 - ✅ No actualizar con batería baja
 - ✅ Logs detallados del proceso
@@ -203,23 +187,6 @@ Ejemplo: v1.11.0
 ---
 
 ## 🛠️ Herramientas
-
-### Generar Checksum
-
-**Linux/Mac:**
-```bash
-sha256sum firmware/v1.11.0/aquadata_v1.11.0.bin
-```
-
-**Windows PowerShell:**
-```powershell
-Get-FileHash firmware\v1.11.0\aquadata_v1.11.0.bin -Algorithm SHA256
-```
-
-### Verificar Tamaño
-```bash
-ls -lh firmware/v1.11.0/aquadata_v1.11.0.bin
-```
 
 ### Nomenclatura de Archivos
 ```
@@ -252,27 +219,9 @@ ls -lh firmware/v1.11.0/aquadata_v1.11.0.bin
 - Espacio insuficiente en flash
 
 **Solución:**
-```bash
-# Verificar URL
-curl -I https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/aquadata_latest.bin
-
-# Verificar tamaño
-ls -lh firmware/latest/aquadata_latest.bin
-```
-
-### Checksum no coincide
-**Causas posibles:**
-- Archivo corrupto durante descarga
-- Checksum mal generado
-
-**Solución:**
-```bash
-# Re-generar checksum
-sha256sum firmware/v1.11.0/aquadata_v1.11.0.bin > firmware/v1.11.0/checksum.txt
-
-# Comparar con version.json
-cat firmware/v1.11.0/checksum.txt
-```
+- Verificar conectividad WiFi del dispositivo
+- Confirmar URL en GitHub
+- Revisar logs del ESP32
 
 ### Bootloop después de OTA
 **El sistema hace rollback automático tras 3 intentos fallidos**
@@ -292,11 +241,11 @@ cat firmware/v1.11.0/checksum.txt
 
 ---
 
-## 🔗 Repositorios Relacionados
+## 🔗 Recursos Relacionados
 
-- [Aquadata-Esp32-firmware](https://github.com/GrupoERE/Aquadata-Esp32-firmware) - Código fuente
-- [Aquadata-Dashboard](https://github.com/GrupoERE/Aquadata-Dashboard) - Panel web
-- [Aquadata-Mobile](https://github.com/GrupoERE/Aquadata-Mobile) - App móvil
+- [Aquadata-Esp32-firmware](https://github.com/GrupoERE/Aquadata-Esp32-firmware) - Código fuente del firmware
+- [Dashboard Capricornio](https://www.capricornio.com.pe/) - Panel de monitoreo en tiempo real
+- [Aquadata-Mobile](https://github.com/GrupoERE/Aquadata-Mobile) - App móvil de configuración
 
 ---
 
