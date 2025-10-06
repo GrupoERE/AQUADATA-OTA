@@ -1,10 +1,5 @@
 {
   "latest_version": "1.11.0",
-  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/Blink.ino.bin",
-  "changelog": "Código Blink - segundo firmware subido al sistema OTA",
-  "mandatory": false,
-  "release_date": "2025-09-14",
-  "file_size_kb": 200,
-  "checksum": "",
-  "description": "Código Blink funcionando via OTA"
+  "firmware_url": "http://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/Blink.ino.bin",
+  "changelog": "Código Blink - segundo firmware"
 }
