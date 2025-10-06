@@ -1,5 +1,9 @@
 {
-  "latest_version": "1.11.0",
-  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/main/firmware/latest/Blink.ino.bin",
-  "changelog": "Código Blink - segundo firmware"
+  "latest_version": "1.0.0",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/latest/aquadata.bin",
+  "changelog": "Primera versión del sistema AQUADATA",
+  "mandatory": false,
+  "release_date": "2025-10-05",
+  "file_size_kb": 800,
+  "checksum": ""
 }
