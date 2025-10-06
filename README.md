@@ -75,7 +75,7 @@ AQUADATA-OTA/
 
 3. **Hacer commit y push** a GitHub
 
-4. **Los dispositivos se actualizan automáticamente** en la siguiente verificación (cada 1 hora)
+4. **Los dispositivos se actualizan automáticamente** en la siguiente verificación (cada minuto)
 
 ---
 
