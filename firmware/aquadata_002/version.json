@@ -2,7 +2,7 @@
 {
   "latest_version": "1.15.0",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_002/firmware.bin",
-  "changelog": "Fix crítico para dispositivo 002bgb",
+  "changelog": "Fix crítico para dispositivo 002bgbDFSGSG",
   "mandatory": true,
   "release_date": "2025-10-03",
   "file_size_kb": 785,
