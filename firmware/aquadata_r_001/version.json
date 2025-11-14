@@ -1,0 +1,10 @@
+{
+  "latest_version": "1.13.2",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_r_001/firmware.bin",
+  "changelog": "Actualización para dispositivo 001",
+  "mandatory": false,
+  "release_date": "2025-11-14",
+  "file_size_kb": 800,
+  "checksum": ""
+
+}

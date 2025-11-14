@@ -1,9 +1,9 @@
 {
-  "latest_version": "1.18.0",
+  "latest_version": "1.19.8",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_004/firmware.bin",
-  "changelog": "Actualización para dispositivo 001",
+  "changelog": "Actualización para dispositivo 004",
   "mandatory": false,
-  "release_date": "2025-10-05",
+  "release_date": "2025-11-04",
   "file_size_kb": 800,
   "checksum": ""
 
