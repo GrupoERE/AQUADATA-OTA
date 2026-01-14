@@ -1,7 +1,7 @@
 {
   "latest_version": "1.13.11",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_003/firmware.bin",
-  "changelog": "Actualización para dispositivo 003",
+  "changelog": "Actualización para dispositivo voyaguer 003",
   "mandatory": false,
   "release_date": "2025-11-13",
   "file_size_kb": 800,
