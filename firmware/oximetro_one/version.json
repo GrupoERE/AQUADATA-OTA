@@ -1,6 +1,6 @@
 
 {
-  "latest_version": "1.19.28",
+  "latest_version": "1.19.30",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/oximetro_one/INO_VITCHIN.ino.bin",
   "changelog": "OKKK",
   "mandatory": false,
