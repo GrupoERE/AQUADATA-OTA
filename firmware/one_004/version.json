@@ -1,0 +1,10 @@
+
+{
+  "latest_version": "1.0.5",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/one_004/INO_VITCHIN.ino.bin",
+  "changelog": "OKKK",
+  "mandatory": false,
+  "release_date": "2026-04-11",
+  "file_size_kb": 785,
+  "checksum": ""
+}
