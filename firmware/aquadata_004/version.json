@@ -1,6 +1,6 @@
 {
-  "latest_version": "1.19.13",
-  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_004/firmware.bin",
+  "latest_version": "1.19.18",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_004/INO_VITCHIN.ino.bin",
   "changelog": "Actualización para dispositivo 004",
   "mandatory": false,
   "release_date": "2025-11-30",
