@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.30.0",
+  "latest_version": "1.31.0",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_006/INO_VITCHIN.ino.bin",
   "changelog": "pH reasignado a address Modbus 2 para evitar colision con el oximetro DO (address 1) en el bus RS485",
   "mandatory": false,
