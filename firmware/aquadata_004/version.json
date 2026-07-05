@@ -1,9 +1,9 @@
 {
-  "latest_version": "1.34.21",
+  "latest_version": "1.35.10",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_004/INO_VITCHIN.ino.bin",
-  "changelog": "Actualización para dispositivo 004",
-  "mandatory": false,
-  "release_date": "2026-06-21",
-  "file_size_kb": 800,
+  "changelog": "Instrumentacion OTA por MQTT (diagnostico remoto) + reduccion de logs Serial",
+  "mandatory": true,
+  "release_date": "2026-07-04",
+  "file_size_kb": 1682,
   "checksum": ""
 }
