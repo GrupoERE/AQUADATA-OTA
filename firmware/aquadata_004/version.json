@@ -1,9 +1,9 @@
 {
-  "latest_version": "1.35.10",
+  "latest_version": "1.35.11",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_004/INO_VITCHIN.ino.bin",
-  "changelog": "Instrumentacion OTA por MQTT (diagnostico remoto) + reduccion de logs Serial",
+  "changelog": "CHECK_OTA:1 (force) libera MQTT antes del OTA para no fallar por doble TLS en el C3",
   "mandatory": true,
-  "release_date": "2026-07-04",
+  "release_date": "2026-07-05",
   "file_size_kb": 1682,
   "checksum": ""
 }
