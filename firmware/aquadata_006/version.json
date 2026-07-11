@@ -1,5 +1,5 @@
 {
-  "latest_version": "1.35.9",
+  "latest_version": "1.35.10",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_006/INO_VITCHIN.ino.bin",
   "changelog": "MQTT probes",
   "mandatory": true,
