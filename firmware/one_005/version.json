@@ -1,9 +1,9 @@
 {
   "latest_version": "2.1.8",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/one_005/INO_VITCHIN.ino.bin",
-  "changelog": "Nueva subida de codigo caaa",
+  "changelog": "FIX SD pinout",
   "mandatory": false,
-  "release_date": "2026-08-18",
+  "release_date": "2026-08-21",
   "file_size_kb": 785,
   "checksum": ""
 }
