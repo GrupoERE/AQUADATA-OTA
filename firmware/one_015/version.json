@@ -1,6 +1,6 @@
 
 {
-  "latest_version": "2.1.8",
+  "latest_version": "2.1.9",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/one_015/INO_VITCHIN.ino.bin",
   "changelog": "calibration fix",
   "mandatory": false,
