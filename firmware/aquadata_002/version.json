@@ -1,10 +1,9 @@
-
 {
-  "latest_version": "1.19.17",
-  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_002/firmware.bin",
-  "changelog": "OKKK",
+  "latest_version": "2.1.10",
+  "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/aquadata_002/INO_VITCHIN.ino.bin",
+  "changelog": "Puesta al dia con la flota desde 1.19.17: MB_SCAN, diagnostico de reinicios, WiFi por BLE persistente, captura OLED, reporte de cortes de red, correccion de altitud, calibracion lineal",
   "mandatory": false,
-  "release_date": "2025-11-21",
-  "file_size_kb": 785,
+  "release_date": "2026-10-24",
+  "file_size_kb": 1697,
   "checksum": ""
 }
