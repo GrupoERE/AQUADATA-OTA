@@ -1,10 +1,9 @@
-
 {
-  "latest_version": "2.5.1",
+  "latest_version": "2.5.2",
   "firmware_url": "https://raw.githubusercontent.com/GrupoERE/AQUADATA-OTA/refs/heads/main/firmware/one_016/INO_VITCHIN.ino.bin",
-  "changelog": "relay control",
+  "changelog": "SET_RELAY:min,max infiere la histeresis a +/-1 mg/L; rele por oxigeno fuera de banda (bajo y alto)",
   "mandatory": false,
   "release_date": "2026-11-26",
-  "file_size_kb": 785,
+  "file_size_kb": 1587,
   "checksum": ""
 }
